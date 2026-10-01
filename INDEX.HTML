@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Koussay Magoura — Web Developer specializing in modern websites, web applications, management systems and AI-powered solutions.">
+  <meta property="og:title" content="Koussay Magoura | Web Developer">
+  <meta property="og:description" content="Web Developer — Web Apps, Management Systems, AI & Web Solutions.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#07090e">
+  <title>Koussay Magoura | Web Developer</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Aref+Ruqaa:wght@400;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800;900&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-scene" aria-hidden="true">
+    <canvas id="spaceCanvas"></canvas>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+    <div class="grid-floor"></div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#home">
+      <span class="brand-dot"></span>
+      <span>Koussay Magoura</span>
+      <small>KAKA-311</small>
+    </a>
+    <nav id="nav" class="nav">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#skills" data-i18n="nav.skills">Skills</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">☼</button>
+      <button class="lang-btn" id="langBtn" aria-label="Switch language">AR</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero container reveal">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="pulse"></span>
+          <span data-i18n="hero.availability">Available for freelance & remote projects</span>
+        </div>
+        <h1>
+          <span data-i18n="hero.greeting">Building digital</span><br>
+          <em data-i18n="hero.highlight">products that work.</em>
+        </h1>
+        <p class="hero-lead" data-i18n="hero.desc">
+          Independent Web Developer focused on modern websites, web applications, management systems, landing pages and custom digital solutions.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects" data-i18n="hero.projects">View projects</a>
+          <a class="btn btn-ghost" href="https://t.me/koussay123456" target="_blank" rel="noopener" data-i18n="hero.contact">Contact me ↗</a>
+          <a class="btn btn-text" href="assets/cv.pdf" download data-i18n="hero.cv">Download CV</a>
+        </div>
+        <div class="hero-meta">
+          <span>⌖ M'Sila, Algeria</span>
+          <span>◉ JavaScript · React · Next.js</span>
+        </div>
+      </div>
+
+      <div class="terminal-wrap tilt reveal">
+        <div class="terminal">
+          <div class="terminal-head">
+            <span class="traffic red"></span>
+            <span class="traffic yellow"></span>
+            <span class="traffic green"></span>
+            <span class="terminal-title">koussay@dev:~</span>
+            <span class="terminal-status">● online</span>
+          </div>
+          <div class="terminal-body" id="terminalBody">
+            <div>
+              <span class="prompt">koussay@dev</span><span class="muted">:</span><span class="path">~</span><span class="muted">$</span> 
+              <span id="typed"></span><span class="cursor"></span>
+            </div>
+            <div id="terminalOutput" class="terminal-output"></div>
+          </div>
+        </div>
+        <div class="terminal-glow"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section container reveal">
+      <div class="section-kicker" data-i18n="about.kicker">01 / PROFILE</div>
+      <div class="two-col">
+        <div>
+          <h2 data-i18n="about.title">From idea to<br><span>working product.</span></h2>
+        </div>
+        <div>
+          <p class="large" data-i18n="about.text">
+            I build practical web products from concept to deployment, combining clean interfaces, modern JavaScript frameworks, databases and thoughtful problem solving.
+          </p>
+          <div class="facts">
+            <div>
+              <b>60–80%</b>
+              <span data-i18n="about.fact1">independent work on current platform</span>
+            </div>
+            <div>
+              <b>80%</b>
+              <span data-i18n="about.fact2">independent development on Atafawok School</span>
+            </div>
+            <div>
+              <b>AI</b>
+              <span data-i18n="about.fact3">used strategically for debugging, planning & testing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section container reveal">
+      <div class="section-kicker" data-i18n="skills.kicker">02 / STACK</div>
+      <h2 data-i18n="skills.title">Tools I build with.</h2>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <span>01</span>
+          <h3>Front-End</h3>
+          <div class="tags">HTML5 · CSS3 · JavaScript · React · Next.js · Responsive UI</div>
+        </article>
+        <article class="skill-card">
+          <span>02</span>
+          <h3>Back-End</h3>
+          <div class="tags">Node.js · Express.js · Authentication · CRUD · Integration</div>
+        </article>
+        <article class="skill-card">
+          <span>03</span>
+          <h3>Database</h3>
+          <div class="tags">MongoDB · Data Modeling · CRUD · User Data</div>
+        </article>
+        <article class="skill-card">
+          <span>04</span>
+          <h3>AI & APIs</h3>
+          <div class="tags">Gemini · ChatGPT · Claude · AI Integration · API Integration</div>
+        </article>
+        <article class="skill-card">
+          <span>05</span>
+          <h3>Workflow</h3>
+          <div class="tags">Git · GitHub · npm · VS Code · PowerShell</div>
+        </article>
+        <article class="skill-card">
+          <span>06</span>
+          <h3>Deployment</h3>
+          <div class="tags">Vercel · Netlify · Render · Environment Variables</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section container reveal">
+      <div class="section-kicker" data-i18n="projects.kicker">03 / SELECTED WORK</div>
+      <div class="section-head">
+        <h2 data-i18n="projects.title">Projects with a purpose.</h2>
+        <span class="count">04</span>
+      </div>
+      <div class="projects">
+        <article class="project featured">
+          <div class="project-index">01</div>
+          <div class="project-main">
+            <div class="status live">● LIVE</div>
+            <h3>Atafawok School</h3>
+            <p data-i18n="project1.desc">
+              Educational web application developed for an educational project, with approximately 80% of the development handled independently.
+            </p>
+            <div class="chips">React · Next.js · JavaScript · MongoDB · Vercel</div>
+            <div class="project-features" data-i18n="project1.feat">
+              Authentication · Dashboard · Student Management · Educational Content · Database · Responsive Design
+            </div>
+            <a class="project-link" href="https://atafawok-school-4qif.vercel.app" target="_blank" rel="noopener" data-i18n="project.demo">Live demo ↗</a>
+          </div>
+          <div class="project-visual school-visual">
+            <div class="mini-window">
+              <span></span><span></span><span></span>
+              <div class="mini-chart"></div>
+              <div class="mini-lines"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-index">02</div>
+          <div class="project-main">
+            <div class="status" data-i18n="status.dev">IN DEVELOPMENT</div>
+            <h3 data-i18n="project2.title">Educational Institution Management Platform</h3>
+            <p data-i18n="project2.desc">
+              Comprehensive management platform for private educational institutions and external teaching organizations.
+            </p>
+            <div class="chips">Next.js · React · Node.js · MongoDB</div>
+            <div class="project-features" data-i18n="project2.feat">
+              Students · Teachers · Subjects · Groups · Payments · Statistics · Accounts
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-index">03</div>
+          <div class="project-main">
+            <div class="status">PROJECT</div>
+            <h3 data-i18n="project3.title">AI Telegram Assistant</h3>
+            <p data-i18n="project3.desc">
+              Telegram-based AI assistant project integrating Google's Gemini API for intelligent conversations and AI-powered features.
+            </p>
+            <div class="chips">Telegram · Gemini API · AI</div>
+            <div class="project-features" data-i18n="project3.feat">
+              Conversations · Programming Help · Summaries · Image Generation · Web Search
+            </div>
+            <small data-i18n="project3.role">Role: Project Supervisor / Technical Coordination</small>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-index">04</div>
+          <div class="project-main">
+            <div class="status">WEB PROJECT</div>
+            <h3 data-i18n="project4.title">Restaurant Digital Menu</h3>
+            <p data-i18n="project4.desc">
+              Digital menu web solution designed to give restaurant customers quick access to menu information.
+            </p>
+            <div class="chips">HTML · CSS · JavaScript · Responsive UI</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="section container reveal">
+      <div class="section-kicker" data-i18n="services.kicker">04 / SERVICES</div>
+      <h2 data-i18n="services.title">What I can build.</h2>
+      <div class="service-grid">
+        <div class="service">
+          <b>01</b>
+          <h3 data-i18n="srv1.title">Websites & Landing Pages</h3>
+          <p data-i18n="srv1.desc">Modern, responsive pages built around a clear goal.</p>
+        </div>
+        <div class="service">
+          <b>02</b>
+          <h3 data-i18n="srv2.title">Web Applications</h3>
+          <p data-i18n="srv2.desc">Interactive products, dashboards and management systems.</p>
+        </div>
+        <div class="service">
+          <b>03</b>
+          <h3 data-i18n="srv3.title">Custom Systems</h3>
+          <p data-i18n="srv3.desc">Database-driven solutions tailored to a specific workflow.</p>
+        </div>
+        <div class="service">
+          <b>04</b>
+          <h3 data-i18n="srv4.title">AI & Integrations</h3>
+          <p data-i18n="srv4.desc">Connect web products with AI services and external APIs.</p>
+        </div>
+        <div class="service">
+          <b>05</b>
+          <h3 data-i18n="srv5.title">UI Implementation</h3>
+          <p data-i18n="srv5.desc">Responsive interfaces from ideas, references or designs.</p>
+        </div>
+        <div class="service">
+          <b>06</b>
+          <h3 data-i18n="srv6.title">Deployment & Fixes</h3>
+          <p data-i18n="srv6.desc">Deployment, debugging and development of existing projects.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container reveal">
+      <div class="section-kicker" data-i18n="workflow.kicker">05 / WORKFLOW</div>
+      <h2 data-i18n="workflow.title">A simple process.</h2>
+      <div class="workflow">
+        <div>
+          <span>01</span>
+          <b data-i18n="wf1.b">Understand</b>
+          <small data-i18n="wf1.s">Idea & requirements</small>
+        </div>
+        <div>
+          <span>02</span>
+          <b data-i18n="wf2.b">Plan</b>
+          <small data-i18n="wf2.s">Structure & approach</small>
+        </div>
+        <div>
+          <span>03</span>
+          <b data-i18n="wf3.b">Build</b>
+          <small data-i18n="wf3.s">UI & development</small>
+        </div>
+        <div>
+          <span>04</span>
+          <b data-i18n="wf4.b">Test</b>
+          <small data-i18n="wf4.s">Debug & refine</small>
+        </div>
+        <div>
+          <span>05</span>
+          <b data-i18n="wf5.b">Deploy</b>
+          <small data-i18n="wf5.s">Ship the product</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section reveal">
+      <div class="container contact-box">
+        <div>
+          <div class="section-kicker" data-i18n="contact.kicker">06 / CONTACT</div>
+          <h2 data-i18n="contact.title">Have a project<br><em>in mind?</em></h2>
+          <p data-i18n="contact.text">Tell me what you want to build. Let's turn the idea into something usable.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:k4781884@gmail.com">
+            <span data-i18n="contact.emailLbl">Email</span>
+            <b>k4781884@gmail.com ↗</b>
+          </a>
+          <a href="https://t.me/koussay123456" target="_blank" rel="noopener">
+            <span data-i18n="contact.tgLbl">Telegram</span>
+            <b>@koussay123456 ↗</b>
+          </a>
+          <button id="copyBtn" type="button">
+            <span data-i18n="contact.copyLbl">Quick action</span>
+            <b data-i18n="contact.copyBtn">Copy email ⧉</b>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <span>© 2026 Koussay Magoura · KAKA-311</span>
+    <span data-i18n="footer.meta">Web Developer · M'Sila, Algeria</span>
+  </footer>
+
+  <div class="toast" id="toast" data-i18n="toast.msg">Email copied.</div>
+  <button class="top-btn" id="topBtn" aria-label="Back to top">↑</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
